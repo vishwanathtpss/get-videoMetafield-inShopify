@@ -1,0 +1,11 @@
+{% comment  %} 
+    firstly you have to create metafield (type file)
+    copy this code   and it where you want to get on product detail page. 
+{% endcomment %}
+{% assign media = product.metafields.custom.video.value | media_tag %}
+<video
+  width="320"
+  height="240"
+  controls>
+  <source src="{{ media }}">
+</video>
